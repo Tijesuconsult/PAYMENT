@@ -53,7 +53,8 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-align: center;
-    margin-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .gene-body{
     padding: 0px;
@@ -78,10 +79,14 @@
 input{
     padding: 10px ;
     font-size: 18px;
-    color: red;
+    font-weight: 600;
     border-radius: 10px;
     outline: none;
     border: 1px solid transparent;
+}
+.reset input{
+    margin-left: 20px;
+    color: red;
 }
 h1{
     color: white;

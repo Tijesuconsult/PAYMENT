@@ -83,52 +83,60 @@
 const form = document.getElementById('myform')
 const input = document.getElementById('payment')
 let totalFee = "100000"
-// let partPayment = "50000"
 const studentStatus = document.getElementById('pay')
 const student = document.getElementById('name')
 const studentMatric = document.getElementById('matric')
 
 
-// let studDetails = ['blessing']
+const allStudents = [
+    {
+    name: "Olusade Adewale",
+    matric: 'OIC001'
+},
+{
+    name: "Adetolani Adewale",
+    matric: 'OIC002'
+},
+{
+    name: "Adebola Israel",
+    matric: 'OIC003'
+},
+{
+    name: "Oluwadare Tolulope",
+    matric: 'OIC004'
+},
+{
+    name: "Ayoola Blessing",
+    matric: 'OIC005'
+},
+]
 
-const studentCred = [{
-    name:'Blessing',
-    name2:'Kayode',
-    name3:'Korede',
-    name4:'Adeolu',
-    name5:'Bayo',
-}]
-
-console.log(studentCred.name)
-// let studDetails = ''
-// if(studDetails.includes == true ){
-//     console.log('Yes')
-//     document.getElementById('errorDetails').innerHTML = studDetails
-// }
-
-// else{
-//     'No'
-// }
-
+const validateStudent =()=> allStudents.filter((students)=> students.name.toLowerCase()=== student.value.toLowerCase() && students.matric.toLowerCase() === studentMatric.value.toLowerCase()
+)
 function valid (e){
     e.preventDefault()
+    const check =validateStudent()
+    // console.log(check)
+    // console.log(check.length)
+    if(check.length===1){
+
+    
     if (input.value===totalFee){
         studentStatus.innerHTML = "Congrats! your payment is completed, you can now print your exam clearance"
     }
     else if (input.value >= 50000 && input.value < 100000){
-        studentStatus.innerHTML = "Part Payment Received! Please complete your payment to print your exam clearance"
+        studentStatus.innerHTML = "Half Payment Received! Please complete your payment to print your exam clearance"
     }
     else if(input.value > 0 && input.value < 50000)
-    studentStatus.innerHTML= "Pay half payment fee to qualify "
+    studentStatus.innerHTML= "Pay half of payment fee to qualify "
 else{
     studentStatus.innerHTMLt = "Sorry you are not a bonifide student"
 }
+    }
+    else{
+        studentStatus.innerHTML ="Name or matric number is incorrect"
+    }
 }
-
-// const myStudent = ["Blessing","Akeem","Bola","Roqeeb", "Tide","Adeshina","Dapo","Saheed"]
-
-// console.log(myStudent); 
- 
 
 
 form.addEventListener('submit', valid)

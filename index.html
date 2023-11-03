@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>payment</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="gene-body">
- <!-- <h1 id="dom">This a h1 tag</h1>
+    <!-- <h1 id="dom">This a h1 tag</h1>
 <p class="name">This a p tag</p> -->
 
     <!-- <script> 
@@ -27,7 +29,7 @@
 </div>
 </div> -->
 
-<!-- <form id="form" action="">
+    <!-- <form id="form" action="">
  Username:   <input id="user" type="text" placeholder="Username"/>
  <br><br>
  Password: <input id="pss" type="password" placeholder="Password"/>
@@ -35,28 +37,34 @@
  <input id="sub" type="submit"/> 
 </form>
 <p id="text"></p> -->
-<div >
-<div class="body">
-<i class="fa fa-fade"> <h1>School Payment</h1></i>
-<form action="" id="myform">
-    <input type="text" placeholder="Full Name." required> <br><br>
-    <p id="errorDetails"></p>
-    <input type="text" placeholder="Matric No." required> <br><br>
-    <input id="payment" type="text" placeholder="Amount Paid" pattern="[0-9]*" title="Number Only" required> <br><br>
-    <input style="color: black;" type="submit">
-    <p id="pay"></p>
-    
-<!-- <div id="name"> </div>
+    <div>
+        <div class="body">
+            <i class="fa fa-fade">
+                <h1>School Payment</h1>
+            </i>
+            <form action="" id="myform">
+                <input id="name" type="text" placeholder="Full Name" required> <br><br>
+                <p id="errorDetails"></p>
+                <input id="matric" type="text" placeholder="Registration No" required> <br><br>
+                <input id="payment" type="text" placeholder="Amount to pay" pattern="[0-9]*" title="Number Only"
+                    required> <br><br>
+                <input style="color: black;" type="submit">
+                <span class="reset">
+                    <input type="reset" value="Reset">
+                </span>
+                <p id="pay"></p>
+
+                <!-- <div id="name"> </div>
 <p id="matric"></p> -->
-</form>
+            </form>
+            <button onclick="window.print()">Print</button>
+        </div>
+    </div>
 
-<button onclick="window.print()">Print</button>
-</div>
-</div>
 
-
-<!-- <button onclick="document.getElementById('Welcome').innerHTML=Date()">Submit</button>
+    <!-- <button onclick="document.getElementById('Welcome').innerHTML=Date()">Submit</button>
 <p id="Welcome">Welcome Blessing</p> -->
     <script src="./java.js"></script>
 </body>
+
 </html>
